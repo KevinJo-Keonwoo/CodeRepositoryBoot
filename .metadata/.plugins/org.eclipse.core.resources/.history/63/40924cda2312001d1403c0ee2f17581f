@@ -1,0 +1,27 @@
+2022-08-02 14:27:39.039  INFO 25496 --- [HikariPool-1 connection closer] jdbc.audit                               : 2. Connection.close() returned 
+2022-08-02 14:27:39.041  INFO 25496 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-02 14:27:39.147  INFO 25496 --- [restartedMain] com.my.Demo1Application                  : Starting Demo1Application using Java 1.8.0_321 on Kevin with PID 25496 (C:\244\MySpringBoot\demo1\target\classes started by jokw9 in C:\244\MySpringBoot\demo1)
+2022-08-02 14:27:39.148  INFO 25496 --- [restartedMain] com.my.Demo1Application                  : No active profile set, falling back to 1 default profile: "default"
+2022-08-02 14:27:39.285  WARN 25496 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.my]' package. Please check your configuration.
+2022-08-02 14:27:39.334  INFO 25496 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2022-08-02 14:27:39.335  INFO 25496 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-02 14:27:39.335  INFO 25496 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-08-02 14:27:39.344  INFO 25496 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/demo1]  : Initializing Spring embedded WebApplicationContext
+2022-08-02 14:27:39.344  INFO 25496 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 195 ms
+2022-08-02 14:27:39.359  INFO 25496 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-08-02 14:27:39.379  INFO 25496 --- [restartedMain] jdbc.connection                          : 3. Connection opened
+2022-08-02 14:27:39.379  INFO 25496 --- [restartedMain] jdbc.audit                               : 3. Connection.new Connection returned 
+2022-08-02 14:27:39.379  INFO 25496 --- [restartedMain] jdbc.audit                               : 3. Connection.getNetworkTimeout() returned 0
+2022-08-02 14:27:39.379  INFO 25496 --- [restartedMain] jdbc.audit                               : 3. Connection.isReadOnly() returned false
+2022-08-02 14:27:39.379  INFO 25496 --- [restartedMain] jdbc.audit                               : 3. Connection.getAutoCommit() returned true
+2022-08-02 14:27:39.380  INFO 25496 --- [restartedMain] jdbc.audit                               : 3. Connection.isValid(1) returned true
+2022-08-02 14:27:39.380  INFO 25496 --- [restartedMain] jdbc.audit                               : 3. Connection.getTransactionIsolation() returned 2
+2022-08-02 14:27:39.381  INFO 25496 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-08-02 14:27:39.463  INFO 25496 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-08-02 14:27:39.470  INFO 25496 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path '/demo1'
+2022-08-02 14:27:39.474  INFO 25496 --- [restartedMain] com.my.Demo1Application                  : Started Demo1Application in 0.35 seconds (JVM running for 112.464)
+2022-08-02 14:27:39.475  INFO 25496 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-08-02 14:27:39.507  INFO 25496 --- [HikariPool-2 connection adder] jdbc.connection                          : 4. Connection opened
+2022-08-02 14:27:39.508  INFO 25496 --- [HikariPool-2 connection adder] jdbc.audit                               : 4. Connection.new Connection returned 
+2022-08-02 14:27:39.508  INFO 25496 --- [HikariPool-2 connection adder] jdbc.audit                               : 4. Connection.isReadOnly() returned false
+2022-08-02 14:27:39.508  INFO 25496 --- [HikariPool-2 connection adder] jdbc.audit                               : 4. Connection.getAutoCommit() returned true

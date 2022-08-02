@@ -1,0 +1,4 @@
+2022-08-02 14:23:00.094  INFO 16844 --- [HikariPool-1 connection adder] jdbc.audit                               : 2. Connection.getAutoCommit() returned true
+2022-08-02 14:23:00.489  INFO 16844 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-08-02 14:23:00.529  INFO 16844 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path '/demo1'
+2022-08-02 14:23:00.542  INFO 16844 --- [restartedMain] com.my.Demo1Application                  : Started Demo1Application in 3.428 seconds (JVM running for 3.848)
