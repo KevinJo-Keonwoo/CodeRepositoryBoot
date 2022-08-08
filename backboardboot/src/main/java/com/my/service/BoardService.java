@@ -3,6 +3,8 @@ package com.my.service;
 import java.util.List;
 import java.util.Optional;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -126,7 +128,7 @@ public class BoardService {
 		if(!optB.isPresent()) {
 			throw new ModifyException("글이 없습니다");
 		}else {
-			Board b = optB.get();
+			Board b = optB.get(); //기존 내용가져와서 그대로 사용하고 
 			b.setBoardContent(board.getBoardContent());
 			repository.save(b);
 		}
@@ -134,8 +136,15 @@ public class BoardService {
 //			
 //		});
 	}
+	@Transactional
 	public void removeBoard(Long boardNo) throws RemoveException {
-		repository.deleteById(boardNo);
+		Optional<Board> optB = repository.findById(boardNo);
+		if(!optB.isPresent()) {
+			throw new RemoveException("삭제할 글이 없습니다");
+		}else {
+			repository.deleteReply(boardNo);
+			repository.deleteById(boardNo);
+		}
 	}
 	
 }

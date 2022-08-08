@@ -12,9 +12,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort.Direction;
 
 import com.my.dto.Board;
 
@@ -98,7 +98,7 @@ class BoardRepositoryTest {
 	void testFindAllPage() {
 		int currentPage = 2;
 		Pageable pageable = PageRequest.of(currentPage-1, 4);
-		List<Board>	list = repository.findAll(pageable);  //플젝에선 findAll말고  네이티브쿼리로써야함 
+		Page<Board>	list = repository.findAll(pageable);  //플젝에선 findAll말고  네이티브쿼리로써야함 
 		list.forEach((b) -> {
 			logger.error(b.toString());
 		});

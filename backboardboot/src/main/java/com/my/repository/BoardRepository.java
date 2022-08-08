@@ -2,13 +2,16 @@ package com.my.repository;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 import com.my.dto.Board;
 
 public interface BoardRepository extends CrudRepository<Board, Long> { //Board자리는 사용할 엔터티 자료형은 Wrapper Class로 사용해야함 
-	List<Board> findAll(org.springframework.data.domain.Pageable paging);
+//	List<Board> findAll(org.springframework.data.domain.Pageable paging);
+	Page<Board> findAll(org.springframework.data.domain.Pageable paging);
 
 	@Query(value = "SELECT *\r\n"
 			+ "FROM (\r\n"
@@ -24,7 +27,6 @@ public interface BoardRepository extends CrudRepository<Board, Long> { //Board�
 			+ "WHERE r BETWEEN ?1 AND ?2"
 			,nativeQuery = true)
 	List<Board> findByPage(int startRow, int endRow);
-	
 	/**
 	 * 검색어를 포함한 게시글제목 또는 검색어
 	 * @param word
@@ -51,6 +53,7 @@ public interface BoardRepository extends CrudRepository<Board, Long> { //Board�
 //	@Query(value = "SELECT COUNT(*) FROM board")
 //	int	findCount();
 	
+	@Modifying
 	@Query(value = "DELETE FROM board_jpa"
 			+ "		WHERE board_no IN ( SELECT board_no"
 			+ "							FROM board_jpa"
@@ -59,6 +62,9 @@ public interface BoardRepository extends CrudRepository<Board, Long> { //Board�
 			, nativeQuery = true)
 	void deleteReply(Long boardNo);
 	
+	//검색 쿼리문 //selectbyword 
+	//글행의 개수 select count
+	//
 }
 
 
