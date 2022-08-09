@@ -1,4 +1,0 @@
-server.port=9999
-server.servlet.context-path:/demo1
-#server.error.whitelabel.enabled=false
-#spring.mvc.view.prefix=/WEB-INF/views

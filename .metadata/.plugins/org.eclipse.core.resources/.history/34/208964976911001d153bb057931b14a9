@@ -1,3 +1,0 @@
-server.port=9999
-server.selvlet.context-path:/demo1
-server.error.whitelabel.enabled=false
