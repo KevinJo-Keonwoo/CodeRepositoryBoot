@@ -37,7 +37,7 @@ class OrderInfoRepositoryTest {
 		lines.add(line1);
 
 		Product p2 = new Product();
-		p2.setProdNo("C0002");
+		p2.setProdNo("C0002" );
 		OrderLine line2 = new OrderLine();
 		line2.setOrderInfo(info);
 		line2.setOrderQuantity(2);
