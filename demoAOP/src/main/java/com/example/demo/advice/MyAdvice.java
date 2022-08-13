@@ -23,6 +23,7 @@ public class MyAdvice {
 //	@Before("pointcut()")
 	public void logBefore(JoinPoint jp) throws Throwable{
 		logger.error("@Before:" +  jp.getSignature());
+		logger.error("@Before:" +  jp.getSignature());
 	}
 	@Around("execution(* say*(..) )")
 	public Object logAround(ProceedingJoinPoint pjp) throws Throwable { 
